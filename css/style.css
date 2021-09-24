@@ -5,6 +5,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -366,12 +367,12 @@ img {
 /**
  * Basic typography style for copy text
  */
-html {
-  font-size: 62.5%;
+body {
+  font-family: "Montserrat", sans-serif;
 }
 
-body {
-  font-family: "Red Hat Display", sans-serif;
+h1, h2, h3, h4, p {
+  margin: 0;
 }
 
 /**
@@ -406,6 +407,82 @@ body {
 
 .nav {
   display: none;
+}
+
+.elements-on-top {
+  position: relative;
+}
+
+.elements-on-top::after {
+  position: absolute;
+  content: "";
+  background-image: url("../../../assets/img/rectangles-small.svg");
+  background-repeat: no-repeat;
+  right: 0;
+  bottom: 0;
+  width: 80px;
+  height: 117px;
+}
+
+.section-1 {
+  padding: 24px 0 58px;
+}
+
+.img-rounded {
+  border-radius: 24px;
+}
+
+.person-img {
+  margin-bottom: 24px;
+}
+
+.person__fio {
+  font-size: 40px;
+  line-height: 48px;
+  margin-bottom: 16px;
+}
+
+.person-general {
+  margin-bottom: 32px;
+}
+
+.person-general__items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.person-general__item:not(:last-child) {
+  margin-right: 39px;
+}
+
+.person-general__item h4 {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: bold;
+  color: #AA7ECD;
+  margin-bottom: 4px;
+}
+
+.person-general__item p {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  color: #303030;
+}
+
+.person-about h3 {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 800;
+  color: #303030;
+  margin-bottom: 16px;
+}
+
+.person-about p {
+  font-size: 15px;
+  line-height: 24px;
 }
 
 /*# sourceMappingURL=style.css.map */

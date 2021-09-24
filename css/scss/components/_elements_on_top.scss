@@ -1,0 +1,15 @@
+.elements-on-top {
+  position: relative;
+}
+.elements-on-top::after {
+  position: absolute;
+
+  content: "";
+  background-image: url('../../../assets/img/rectangles-small.svg');
+  background-repeat: no-repeat;
+
+  right: 0;
+  bottom: 0;
+  width: $rectangles-small-w;
+  height: $rectangles-small-h;
+}

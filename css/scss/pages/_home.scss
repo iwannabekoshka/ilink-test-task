@@ -1,0 +1,61 @@
+.section-1 {
+  padding: 24px 0 58px;
+}
+.img-rounded {
+  border-radius: 24px;
+}
+
+.person-img {
+  margin-bottom: 24px;
+}
+
+.person__fio {
+  font-size: 40px;
+  line-height: 48px;
+
+  margin-bottom: 16px;
+}
+
+.person-general {
+  margin-bottom: 32px;
+}
+.person-general__items {
+  margin: 0; // очищение отступов списка
+  padding: 0;
+  list-style: none;
+
+  display: flex;
+}
+.person-general__item:not(:last-child) {
+  margin-right: 39px;
+}
+.person-general__item h4 {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: bold;
+
+  color: $color-east-side;
+
+  margin-bottom: 4px;
+}
+.person-general__item p {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+
+  color: $color-east-mine-shaft;
+}
+
+.person-about h3 {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 800;
+
+  color: $color-east-mine-shaft;
+
+  margin-bottom: 16px;
+}
+.person-about p {
+  font-size: 15px;
+  line-height: 24px;
+}
