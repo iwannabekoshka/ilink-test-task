@@ -1,15 +1,24 @@
 .elements-on-top {
-  position: relative;
-}
-.elements-on-top::after {
   position: absolute;
 
-  content: "";
-  background-image: url('../../../assets/img/rectangles-small.svg');
-  background-repeat: no-repeat;
+
+}
+
+.elements-on-top--1 {
+  @extend .elements-on-top;
+
+  width: 30%;
+  height: 40%;
 
   right: 0;
-  bottom: 0;
-  width: $rectangles-small-w;
-  height: $rectangles-small-h;
+  bottom: -10%;
+}
+.elements-on-top--2 {
+  @extend .elements-on-top;
+
+  height: 100%;
+
+  right: 0;
+  top: 50%;
+  transform: translate(50%, -50%) rotate(-150deg);
 }

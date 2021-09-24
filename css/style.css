@@ -390,6 +390,10 @@ h1, h2, h3, h4, p {
   margin-right: auto;
 }
 
+.relative {
+  position: relative;
+}
+
 .header {
   background-color: #F8F3FF;
 }
@@ -428,19 +432,22 @@ h1, h2, h3, h4, p {
   width: 100%;
 }
 
-.elements-on-top {
-  position: relative;
+.elements-on-top, .elements-on-top--2, .elements-on-top--1 {
+  position: absolute;
 }
 
-.elements-on-top::after {
-  position: absolute;
-  content: "";
-  background-image: url("../../../assets/img/rectangles-small.svg");
-  background-repeat: no-repeat;
+.elements-on-top--1 {
+  width: 30%;
+  height: 40%;
   right: 0;
-  bottom: 0;
-  width: 80px;
-  height: 117px;
+  bottom: -10%;
+}
+
+.elements-on-top--2 {
+  height: 100%;
+  right: 0;
+  top: 50%;
+  transform: translate(50%, -50%) rotate(-150deg);
 }
 
 .section-1 {
@@ -502,6 +509,17 @@ h1, h2, h3, h4, p {
 .person-about p {
   font-size: 15px;
   line-height: 24px;
+}
+
+.section-2 {
+  padding: 40px 0 48px;
+  background-color: #F8F3FF;
+}
+
+.section-2 h2 {
+  font-size: 32px;
+  line-height: 41px;
+  width: 13ch;
 }
 
 /*# sourceMappingURL=style.css.map */

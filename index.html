@@ -29,8 +29,9 @@
 
 <section class="section section-1 section-cropped person" id="person">
 	<div class="container row">
-		<div class="col elements-on-top person-img">
+		<div class="col person-img relative">
 			<img class="img-rounded" src="/assets/img/person.png" alt="Photo of a person">
+			<img class="elements-on-top--1" src="/assets/img/rectangles-small.svg" alt="Little cute rectangles">
 		</div>
 		<div class="col person-info">
 			<div class="person-general">
@@ -65,9 +66,13 @@
 
 <section class="section section-2" id="tell-us-about">
 	<div class="container">
-		<h2>Tell us about</h2>
+		<div class="section-header relative">
+			<h2>Tell us about yourself</h2>
+<!--			<img class="elements-on-top&#45;&#45;2" src="assets/img/rectangles-small.svg" alt="Cute small rectangles">-->
+		</div>
+
 		<form class="form" action="/">
-			<div class="inputs">
+			<div class="form-inputs">
 				<label class="input-box">
 					<h4>Your name</h4>
 					<input type="text">
@@ -97,13 +102,13 @@
 				</label>
 			</div>
 
-			<div class="file-upload">
+			<div class="form-file">
 				zdes budet krutoi file uploader drag and drop 359 ultra hardcore
 			</div>
 
-			<div class="buttons">
-				<button type="submit">Send info</button>
-				<div class="success">
+			<div class="form-buttons">
+				<button class="btn" type="submit">Send info</button>
+				<div class="form-success">
 					<span class="completed"></span>
 					<p>Completed!</p>
 				</div>
