@@ -1,0 +1,16 @@
+.header {
+  background-color: $color-magnolia;
+}
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 17px 0;
+}
+.header__logo {
+  width: 80px;
+}
+.nav {
+  display: none;
+}
