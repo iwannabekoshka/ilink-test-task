@@ -409,6 +409,25 @@ h1, h2, h3, h4, p {
   display: none;
 }
 
+.completed {
+  display: inline-block;
+  position: relative;
+  width: 32px;
+  height: 32px;
+  border-radius: 9999px;
+  background-color: #E1FEE8;
+}
+
+.completed::after {
+  position: absolute;
+  content: "";
+  background-image: url("../../../assets/img/check.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+
 .elements-on-top {
   position: relative;
 }

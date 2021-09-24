@@ -1,0 +1,20 @@
+.completed {
+  display: inline-block;
+  position: relative;
+
+  width: 32px;
+  height: 32px;
+  border-radius: 9999px;  // значение выше ширины/высоты делает круг,
+                          // иначе может быть овал при несовпадении ширины/высоты
+  background-color: $color-hint-of-green;
+}
+.completed::after {
+  position: absolute;
+  content: "";
+  background-image: url('../../../assets/img/check.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+
+  height: 100%;
+  width: 100%;
+}
