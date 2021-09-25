@@ -12,10 +12,12 @@ const sliderDots = document.querySelectorAll('.slider-dots img');
 const dotInactiveSrc = 'assets/img/icons/dot-inactive.svg';
 const dotActiveSrc = 'assets/img/icons/dot-active.svg';
 
+window.addEventListener('resize', setImagesWidth);
+
 sliderBtnLeft.addEventListener('click', function() {
 	const photoWidth = slider.offsetWidth;
 
-	setImagesWidth(photoWidth);
+	setImagesWidth();
 
 	offset -= photoWidth;
 	position--;
@@ -32,7 +34,7 @@ sliderBtnLeft.addEventListener('click', function() {
 sliderBtnRight.addEventListener('click', function() {
 	const photoWidth = slider.offsetWidth;
 
-	setImagesWidth(photoWidth);
+	setImagesWidth();
 
 	offset += photoWidth;
 	position++;
@@ -47,7 +49,8 @@ sliderBtnRight.addEventListener('click', function() {
 	sliderLine.style.left = -offset + 'px';
 });
 
-function setImagesWidth(photoWidth) { // Картинки почему-то разной ширины, это фикс
+function setImagesWidth() { // Картинки почему-то разной ширины, это фикс
+	const photoWidth = slider.offsetWidth;
 	const images = document.querySelectorAll('.slider-line img');
 	images.forEach(img => {
 		img.style.width = photoWidth + 'px';
