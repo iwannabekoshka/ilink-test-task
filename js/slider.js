@@ -46,7 +46,7 @@ sliderBtnRight.addEventListener('click', function() {
 	}
 
 	setActiveDot();
-	console.log(offset)
+
 	sliderLine.style.left = -offset + 'px';
 });
 
