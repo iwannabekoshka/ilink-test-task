@@ -11,13 +11,13 @@ $slider-height: 535px;
   overflow: hidden;
 
   .slider-line {
+    position: absolute;
+
     height: $slider-height;
 
     display: flex;
 
-    & img {
-      transition: .2s;
-    }
+    transition: .3s;
   }
 }
 

@@ -512,11 +512,10 @@ h1, h2, h3, h4, p {
   overflow: hidden;
 }
 .slider .slider-line {
+  position: absolute;
   height: 535px;
   display: flex;
-}
-.slider .slider-line img {
-  transition: 0.2s;
+  transition: 0.3s;
 }
 
 .slider-panel {
