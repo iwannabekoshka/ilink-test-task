@@ -171,7 +171,12 @@
 
 @media (min-width: $breakpoint-1) {
   .section-2 {
-    padding: 48px 56px;
+    padding: 48px 0 56px;
+
+    background-image: url("../../../assets/img/rectangles-big-1.png"),
+                      url("../../../assets/img/rectangles-big-2.png");
+    background-repeat: no-repeat no-repeat;
+    background-position: left center, right center;
   }
   .elements-on-top--2 {
     display: none;
