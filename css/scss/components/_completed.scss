@@ -7,6 +7,8 @@
   border-radius: 9999px;  // значение выше ширины/высоты делает круг,
                           // иначе может быть овал при несовпадении ширины/высоты
   background-color: $color-hint-of-green;
+
+  margin-right: 8px;
 }
 .completed::after {
   position: absolute;

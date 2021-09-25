@@ -14,11 +14,14 @@
   bottom: -10%;
 }
 .elements-on-top--2 {
-  @extend .elements-on-top;
+  /*@extend .elements-on-top;
 
   height: 100%;
 
   right: 0;
-  top: 50%;
-  transform: translate(50%, -50%) rotate(-150deg);
+  top: 50%;*/
+
+
+  width: auto; //сбросить базовое для картинок 100%
+  transform: rotate(-150deg);
 }

@@ -1,3 +1,21 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
+
+.btn {
+  border: none; // обнуление дефолтной границы
+
+  display: block;
+
+  width: 100%;
+  padding: 16px;
+
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: $color-white;
+
+  border-radius: 12px;
+  background: $color-medium-purple;
+}

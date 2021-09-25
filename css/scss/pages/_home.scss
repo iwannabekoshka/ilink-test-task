@@ -59,6 +59,9 @@
   font-size: 15px;
   line-height: 24px;
 }
+.person-about p:not(:last-child) {
+  margin-bottom: 1em;
+}
 
 //SECTION-2
 .section-2 {
@@ -71,5 +74,14 @@
   font-size: 32px;
   line-height: 41px;
 
-  width: 13ch;
+  width: 65%;
+}
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-success {
+  display: none;
 }

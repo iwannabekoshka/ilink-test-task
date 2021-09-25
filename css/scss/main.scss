@@ -24,7 +24,9 @@
 @import
   'components/button',
   'components/completed',
-  'components/elements_on_top';
+  'components/drag_n_drop_file',
+  'components/elements_on_top',
+  'components/input-box';
 
 // 6. Page-specific styles
 @import 'pages/home';
