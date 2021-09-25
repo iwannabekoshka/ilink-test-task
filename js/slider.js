@@ -1,4 +1,5 @@
 let offset = 0; //Сдвиг картинок слайдера
+let position = 0; //Текущая картинка
 
 const totalImages = document.querySelectorAll('.slider-line img').length;
 const lastImageIndex = totalImages-1;
@@ -17,10 +18,14 @@ sliderBtnLeft.addEventListener('click', function() {
 	setImagesWidth(photoWidth);
 
 	offset -= photoWidth;
+	position--;
 
 	if (offset < 0) {
 		offset = photoWidth*lastImageIndex;
+		position = lastImageIndex;
 	}
+
+	setActiveDot();
 
 	sliderLine.style.left = -offset + 'px';
 });
@@ -30,20 +35,14 @@ sliderBtnRight.addEventListener('click', function() {
 	setImagesWidth(photoWidth);
 
 	offset += photoWidth;
+	position++;
 
 	if (offset > photoWidth*lastImageIndex) {
 		offset = 0;
+		position = 0;
 	}
 
-	// расчет неверен, тк выдает инвертированную позицию, пофиксил css-ом
-	const position = Math.floor((sliderLine.offsetWidth - offset)/(totalImages * 100) ) - 1;
-	sliderDots.forEach((dot, index) => {
-		if (index === position) {
-			dot.src = 'assets/img/icons/dot-active.svg';
-		} else {
-			dot.src = 'assets/img/icons/dot-inactive.svg';
-		}
-	});
+	setActiveDot();
 
 	sliderLine.style.left = -offset + 'px';
 });
@@ -52,5 +51,15 @@ function setImagesWidth(photoWidth) { // Картинки почему-то ра
 	const images = document.querySelectorAll('.slider-line img');
 	images.forEach(img => {
 		img.style.width = photoWidth + 'px';
+	});
+}
+
+function setActiveDot() {
+	sliderDots.forEach((dot, index) => {
+		if (index === position) {
+			dot.src = dotActiveSrc;
+		} else {
+			dot.src = dotInactiveSrc;
+		}
 	});
 }

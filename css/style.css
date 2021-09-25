@@ -362,6 +362,7 @@ html {
 */
 img {
   width: 100%;
+  height: auto;
 }
 
 /**
@@ -534,9 +535,8 @@ h1, h2, h3, h4, p {
 }
 .slider-panel .slider-dots {
   display: flex;
-  flex-direction: row-reverse;
 }
-.slider-panel .slider-dots .slider-dots__item:not(:first-child) {
+.slider-panel .slider-dots .slider-dots__item:not(:last-child) {
   margin-right: 12px;
 }
 .slider-panel .slider-dots .slider-dots__item img {
