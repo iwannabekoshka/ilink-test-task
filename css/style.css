@@ -505,7 +505,42 @@ h1, h2, h3, h4, p {
 }
 
 .slider {
+  position: relative;
   height: 535px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  border-radius: 24px;
+  overflow: hidden;
+}
+.slider .slider-line {
+  height: 535px;
+  display: flex;
+}
+.slider .slider-line img {
+  transition: 0.2s;
+}
+
+.slider-panel {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+.slider-panel .slider-btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+.slider-panel .slider-dots {
+  display: flex;
+}
+.slider-panel .slider-dots .slider-dots__item:not(:last-child) {
+  margin-right: 12px;
+}
+.slider-panel .slider-dots .slider-dots__item img {
+  width: auto;
 }
 
 .section-1 {

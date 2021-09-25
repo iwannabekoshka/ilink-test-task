@@ -19,15 +19,15 @@
 		</div>
 		<nav class="nav">
 			<ul class="nav-list">
-				<li class="nav-list__item"><a href="#person">Jane Doe</a></li>
-				<li class="nav-list__item"><a href="#tell-us-about">Tell us about yourself</a></li>
-				<li class="nav-list__item"><a href="#slider">Slider</a></li>
+				<li class="nav-list__item"><a href="#section-person">Jane Doe</a></li>
+				<li class="nav-list__item"><a href="#section-tell-us-about">Tell us about yourself</a></li>
+				<li class="nav-list__item"><a href="#section-slider">Slider</a></li>
 			</ul>
 		</nav>
 	</div>
 </header>
 
-<section class="section section-1 section-cropped person" id="person">
+<section class="section section-1 section-cropped person" id="section-person">
 	<div class="container row">
 		<div class="col person-img relative">
 			<img class="img-rounded" src="/assets/img/person.png" alt="Photo of a person">
@@ -64,7 +64,7 @@
 	</div>
 </section>
 
-<section class="section section-2" id="tell-us-about">
+<section class="section section-2" id="section-tell-us-about">
 	<div class="container">
 		<div class="section-header relative">
 			<h2>Tell us about yourself</h2>
@@ -118,8 +118,29 @@
 	</div>
 </section>
 
-<section class="section section-3" id="slider">
-	<div class="slider" id="js-slider-container"></div>
+<section class="section section-3" id="section-slider">
+	<div class="container">
+		<div class="slider" id="js-slider-container">
+			<div class="slider-line">
+				<img src="assets/img/slider/slider-1.png" alt="Photo of a blue sea">
+				<img src="assets/img/slider/slider-2.png" alt="Photo of a green forest">
+				<img src="assets/img/slider/slider-3.png" alt="Photo of a snowy mountain">
+			</div>
+			<div class="slider-panel">
+				<button class="slider-btn slider-btn--left">
+					<img src="assets/img/icons/arrow-left.svg" alt="Arrow pointing to left">
+				</button>
+				<div class="slider-dots">
+					<img class="slider-dots__item" src="assets/img/icons/dot-active.svg" alt="White dot">
+					<img class="slider-dots__item" src="assets/img/icons/dot-inactive.svg" alt="Dot with empty belly">
+					<img class="slider-dots__item" src="assets/img/icons/dot-inactive.svg" alt="Dot with empty belly">
+				</div>
+				<button class="slider-btn slider-btn--right">
+					<img src="assets/img/icons/arrow-right.svg" alt="Arrow pointing to left">
+				</button>
+			</div>
+		</div>
+	</div>
 </section>
 
 </body>
