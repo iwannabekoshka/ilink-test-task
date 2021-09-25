@@ -39,8 +39,9 @@ $slider-height: 535px;
 
   .slider-dots {
     display: flex;
+    flex-direction: row-reverse; //костыль связанный с расчетом активной точки
 
-    .slider-dots__item:not(:last-child) {
+    .slider-dots__item:not(:first-child) { //first-child, тк костыль связанный с расчетом активной точки
       margin-right: 12px;
     }
 
