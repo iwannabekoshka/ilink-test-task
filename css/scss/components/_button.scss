@@ -14,8 +14,20 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  color: $color-white;
-
   border-radius: 12px;
+}
+
+.btn-primary {
+  @extend .btn;
+
+  color: $color-white;
   background: $color-medium-purple;
+}
+
+.btn-secondary {
+  @extend .btn;
+
+  color: $color-medium-purple;
+  background: transparent;
+  border: 1px solid $color-medium-purple;
 }
