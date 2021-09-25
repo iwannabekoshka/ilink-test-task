@@ -153,6 +153,7 @@
 .section-2 h2 {
   font-size: 32px;
   line-height: 41px;
+  color: $color-east-mine-shaft;
 
   width: 65%;
 }
@@ -164,6 +165,35 @@
 
 .form-success {
   display: none;
+
+  align-items: center;
+}
+
+@media (min-width: $breakpoint-1) {
+  .section-2 {
+    padding: 48px 56px;
+  }
+  .elements-on-top--2 {
+    display: none;
+  }
+  .section-2 h2 {
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 72px;
+
+    margin-bottom: 40px;
+  }
+
+  .form-inputs div {
+    display: flex;
+  }
+  .form-buttons {
+    display: flex;
+  }
+  .form-buttons .btn {
+    width: 212px;
+    margin-right: 24px;
+  }
 }
 
 //SECTION-3

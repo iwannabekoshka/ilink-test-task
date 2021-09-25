@@ -1,11 +1,14 @@
 .input-box {
   display: block;
 
+  min-width: 270px;
+
   margin-bottom: 40px;
 }
 .input-box h4 {
   font-size: 14px;
   line-height: 19px;
+  font-weight: 600;
   color: $color-east-mine-shaft;
 
   margin-bottom: 8px;
@@ -25,4 +28,12 @@
 .input-box input::-webkit-input-placeholder,
 .input-box select option:disabled {
   color: $color-silver-chalice;
+}
+
+@media (min-width: $breakpoint-1) {
+  .input-box {
+    margin-right: 32px;
+    margin-bottom: 40px;
+  }
+
 }

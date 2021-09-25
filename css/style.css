@@ -443,6 +443,10 @@ h1, h2, h3, h4, p {
     color: #8E43ED;
     font-weight: 500;
   }
+
+  .header__logo {
+    width: 116px;
+  }
 }
 .btn {
   border: none;
@@ -509,12 +513,14 @@ h1, h2, h3, h4, p {
 
 .input-box {
   display: block;
+  min-width: 270px;
   margin-bottom: 40px;
 }
 
 .input-box h4 {
   font-size: 14px;
   line-height: 19px;
+  font-weight: 600;
   color: #303030;
   margin-bottom: 8px;
 }
@@ -535,6 +541,12 @@ h1, h2, h3, h4, p {
   color: #9F9F9F;
 }
 
+@media (min-width: 1024px) {
+  .input-box {
+    margin-right: 32px;
+    margin-bottom: 40px;
+  }
+}
 .slider {
   position: relative;
   height: 535px;
@@ -725,6 +737,7 @@ h1, h2, h3, h4, p {
 .section-2 h2 {
   font-size: 32px;
   line-height: 41px;
+  color: #303030;
   width: 65%;
 }
 
@@ -736,8 +749,38 @@ h1, h2, h3, h4, p {
 
 .form-success {
   display: none;
+  align-items: center;
 }
 
+@media (min-width: 1024px) {
+  .section-2 {
+    padding: 48px 56px;
+  }
+
+  .elements-on-top--2 {
+    display: none;
+  }
+
+  .section-2 h2 {
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 72px;
+    margin-bottom: 40px;
+  }
+
+  .form-inputs div {
+    display: flex;
+  }
+
+  .form-buttons {
+    display: flex;
+  }
+
+  .form-buttons .btn {
+    width: 212px;
+    margin-right: 24px;
+  }
+}
 .section-3 {
   padding: 32px 0;
 }
