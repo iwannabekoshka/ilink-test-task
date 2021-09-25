@@ -26,15 +26,15 @@ $slider-height: 535px;
   }
   .slider-image--1 {
     @extend .slider-image;
-    background-image: url("../../../assets/img/slider/slider-1-large.png");
+    background-image: url("../assets/img/slider/slider-1-large.png");
   }
   .slider-image--2 {
     @extend .slider-image;
-    background-image: url("../../../assets/img/slider/slider-2-large.png");
+    background-image: url("../assets/img/slider/slider-2-large.png");
   }
   .slider-image--3 {
     @extend .slider-image;
-    background-image: url("../../../assets/img/slider/slider-3-large.png");
+    background-image: url("../assets/img/slider/slider-3-large.png");
   }
 }
 
