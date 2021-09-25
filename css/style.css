@@ -504,6 +504,10 @@ h1, h2, h3, h4, p {
   color: #9F9F9F;
 }
 
+.slider {
+  height: 535px;
+}
+
 .section-1 {
   padding: 24px 0 58px;
 }
@@ -588,6 +592,10 @@ h1, h2, h3, h4, p {
 
 .form-success {
   display: none;
+}
+
+.section-3 {
+  padding: 32px 0;
 }
 
 /*# sourceMappingURL=style.css.map */
