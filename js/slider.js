@@ -15,7 +15,7 @@ const dotActiveSrc = 'assets/img/icons/dot-active.svg';
 setImagesWidth();
 window.addEventListener('resize', setImagesWidth);
 
-sliderBtnLeft.addEventListener('click', function() {
+sliderBtnLeft.addEventListener('click', () => {
 	const photoWidth = slider.offsetWidth;
 
 	setImagesWidth();
@@ -32,7 +32,7 @@ sliderBtnLeft.addEventListener('click', function() {
 
 	sliderLine.style.left = -offset + 'px';
 });
-sliderBtnRight.addEventListener('click', function() {
+sliderBtnRight.addEventListener('click', () => {
 	const photoWidth = slider.offsetWidth;
 
 	setImagesWidth();
@@ -49,6 +49,19 @@ sliderBtnRight.addEventListener('click', function() {
 
 	sliderLine.style.left = -offset + 'px';
 });
+
+sliderDots.forEach((dot, index) => {
+	dot.addEventListener('click', () => {
+		position = index;
+
+		const photoWidth = slider.offsetWidth;
+		offset = photoWidth*position;
+
+		setActiveDot();
+
+		sliderLine.style.left = -offset + 'px';
+	})
+})
 
 function setImagesWidth() { // Картинки почему-то разной ширины, это фикс
 	const photoWidth = slider.offsetWidth;
