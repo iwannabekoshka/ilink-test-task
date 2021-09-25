@@ -15,7 +15,7 @@
   display: none;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: $breakpoint-1) {
   .header-content {
     justify-content: space-between;
   }

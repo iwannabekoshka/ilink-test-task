@@ -1,9 +1,55 @@
+.section {
+  position: relative;
+}
+//SECTION-1
 .section-1 {
   padding: 24px 0 58px;
 }
 .img-rounded {
   border-radius: 24px;
 }
+.bg-crop {
+  display: none;
+}
+.bg-crop-tl,
+.bg-crop-br {
+  @extend .bg-crop;
+}
+@media (min-width: $breakpoint-1) {
+  .row {
+    display: flex;
+  }
+  .person-img {
+    width: 45%;
+  }
+  .person-info {
+    width: 50%;
+
+    padding: 44px 0 0 36px;
+  }
+
+  .bg-crop {
+    display: block;
+
+    position: absolute;
+    width: 23%;
+    height: 32%;
+  }
+  .bg-crop-tl {
+    top: 0px;
+    left: 0px;
+  }
+  .bg-crop-br {
+    right: 0px;
+    bottom: 0px;
+  }
+
+  .section-1 {
+    padding: 100px 0;
+  }
+}
+
+
 
 .person-img {
   margin-bottom: 24px;
@@ -12,8 +58,15 @@
 .person__fio {
   font-size: 40px;
   line-height: 48px;
+  color: $color-east-mine-shaft;
 
   margin-bottom: 16px;
+}
+@media (min-width: $breakpoint-2) {
+  .person__fio {
+    font-size: 56px;
+    line-height: 72px;
+  }
 }
 
 .person-general {
@@ -46,6 +99,22 @@
   color: $color-east-mine-shaft;
 }
 
+@media (min-width: $breakpoint-2) {
+  .person-general__item {
+    display: flex;
+  }
+  .person-general__item h4 {
+    margin-right: 8px;
+
+    font-size: 16px;
+    line-height: 21px;
+  }
+  .person-general__item p {
+    font-size: 16px;
+    line-height: 21px;
+  }
+}
+
 .person-about h3 {
   font-size: 20px;
   line-height: 24px;
@@ -61,6 +130,17 @@
 }
 .person-about p:not(:last-child) {
   margin-bottom: 1em;
+}
+
+@media (min-width: $breakpoint-2) {
+  .person-about h3 {
+    font-size: 27px;
+    line-height: 36px;
+  }
+  .person-about p {
+    font-size: 18px;
+    line-height: 32px;
+  }
 }
 
 //SECTION-2
