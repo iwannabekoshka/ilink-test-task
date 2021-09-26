@@ -1,4 +1,4 @@
-const inputs = document.querySelectorAll('.input-box input');
+const inputs = document.querySelectorAll('.form input');
 const select = document.querySelector('.input-select');
 const selectList = document.querySelector('.input-select-list');
 const selectItems = document.querySelectorAll('.input-select-list li');
@@ -10,8 +10,7 @@ const row2 = document.querySelector('.form-inputs__row-2');
 form.addEventListener('submit', function(event) {
 	event.preventDefault();
 
-	if (ifInputsCorrect()) {
-		console.log(formSuccess)
+	if ( ifInputsCorrect() ) {
 		formSuccess.classList.add('active');
 	}
 });
@@ -61,6 +60,14 @@ function validateInput(id) {
 		case 'js-form-birthdate':
 			validateBirthdate();
 			break;
+		default:
+			break;
+	}
+
+	if ( ifInputsCorrect() ) {
+		document.querySelector("#js-btn-submit").disabled = false;
+	} else {
+		document.querySelector("#js-btn-submit").disabled = true;
 	}
 }
 
@@ -105,7 +112,7 @@ function validateBirthdate() {
 }
 
 function ifFileUploaded() {
-	return document.querySelectorAll('.file-uploaded__item').length
+	return document.querySelector('#js-file-input').files.length;
 }
 
 //SELECT

@@ -15,6 +15,9 @@
   font-size: 16px;
   line-height: 24px;
   border-radius: 12px;
+
+  cursor: pointer;
+  transition: .2s;
 }
 
 .btn-primary {
@@ -22,12 +25,31 @@
 
   color: $color-white;
   background: $color-medium-purple;
+
+  &:hover {
+    background: $color-purple-heart;
+  }
+  &:active {
+    background: $color-purple;
+  }
+  &:disabled {
+    background: $color-mischka;
+    cursor: default;
+  }
 }
 
 .btn-secondary {
   @extend .btn;
 
   color: $color-medium-purple;
-  background: transparent;
+  background: $color-selago;
   border: 1px solid $color-medium-purple;
+
+  &:active {
+    background: $color-blue-chalk;
+  }
+  &:disabled {
+    background: $color-mauve;
+    border: $color-mauve;
+  }
 }

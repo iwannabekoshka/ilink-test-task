@@ -458,17 +458,36 @@ h1, h2, h3, h4, p {
   font-size: 16px;
   line-height: 24px;
   border-radius: 12px;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
 .btn-primary {
   color: #FFF;
   background: #8E43ED;
 }
+.btn-primary:hover {
+  background: #6813D3;
+}
+.btn-primary:active {
+  background: #500AA9;
+}
+.btn-primary:disabled {
+  background: #DED9E4;
+  cursor: default;
+}
 
 .btn-secondary {
   color: #8E43ED;
-  background: transparent;
+  background: #FAF8FE;
   border: 1px solid #8E43ED;
+}
+.btn-secondary:active {
+  background: #F0E5FE;
+}
+.btn-secondary:disabled {
+  background: #D9BBFF;
+  border: #D9BBFF;
 }
 
 .completed {
@@ -606,16 +625,20 @@ h1, h2, h3, h4, p {
   margin-bottom: 8px;
 }
 
-.input-box input,
-.input-box select {
+.input-box input {
   width: 100%;
   padding: 15px 12px;
   font-size: 16px;
   line-height: 24px;
   color: #303030;
+  background: #FFF;
   border: 1px solid #D9BBFF;
   border-radius: 12px;
   box-shadow: none;
+  outline: none;
+}
+.input-box input:focus {
+  border-color: #8E43ED;
 }
 
 .input-box input::-webkit-input-placeholder,
@@ -637,6 +660,7 @@ h1, h2, h3, h4, p {
 
 .input-box.danger input {
   border-color: #ED4376;
+  background: #FFF5F5;
 }
 
 @media (min-width: 1024px) {
