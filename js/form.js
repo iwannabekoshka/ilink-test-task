@@ -18,10 +18,14 @@ function validateInput(id) {
 	switch (id) {
 		case 'js-form-gender':
 			validateGender();
+			break;
+		case 'js-form-birthdate':
+			validateBirthdate();
+			break;
 	}
 }
 
-function validateGender(id) {
+function validateGender() {
 	const input = document.querySelector(`#js-form-gender`);
 	const value = input.value.toLowerCase();
 
@@ -29,6 +33,29 @@ function validateGender(id) {
 		input.parentNode.parentNode.classList.remove('danger');
 	} else {
 		input.parentNode.parentNode.classList.add('danger');
+	}
+}
+function validateBirthdate() {
+	const input = document.querySelector(`#js-form-birthdate`);
+	const valueSplitted = input.value.split('.');
+	let correct = true;
+
+	// проверяем, что у нас формат с точками (dd.mm.yyy)
+	if (valueSplitted.length !== 3) correct = false;
+
+	// проверяем, что день между 1 и 31
+	if ( parseInt(valueSplitted[0]) < 1 || parseInt(valueSplitted[0]) > 31) correct = false;
+
+	// проверяем, что месяц между 1 и 12
+	if ( parseInt(valueSplitted[1]) < 1 || parseInt(valueSplitted[1]) > 12) correct = false;
+
+	// проверяем, что год между 1800 и текущим (вдруг настолько олд)
+	if ( parseInt(valueSplitted[2]) < 1800 || parseInt(valueSplitted[2]) > new Date().getFullYear()) correct = false;
+
+	if (correct) {
+		input.parentNode.classList.remove('danger');
+	} else {
+		input.parentNode.classList.add('danger');
 	}
 }
 
