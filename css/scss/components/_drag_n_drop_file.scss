@@ -12,6 +12,12 @@
   margin-bottom: 8px;
 }
 
+@media (min-width: $breakpoint-1) {
+  .file-uploaded__items {
+    display: flex;
+  }
+}
+
 .file-field__action {
   display: flex;
   flex-direction: column;
@@ -45,7 +51,6 @@
       margin-bottom: 0;
       margin-right: 1em;
     }
-
   }
 }
 
@@ -92,5 +97,15 @@
     width: 10px;
 
     cursor: pointer;
+  }
+
+  @media (min-width: $breakpoint-1) {
+    & {
+      margin-right: 8px;
+    }
+
+    .file-info {
+      margin-right: 60px;
+    }
   }
 }

@@ -522,6 +522,11 @@ h1, h2, h3, h4, p {
   margin-bottom: 8px;
 }
 
+@media (min-width: 1024px) {
+  .file-uploaded__items {
+    display: flex;
+  }
+}
 .file-field__action {
   display: flex;
   flex-direction: column;
@@ -586,6 +591,14 @@ h1, h2, h3, h4, p {
 .file-uploaded__item .file-remove {
   width: 10px;
   cursor: pointer;
+}
+@media (min-width: 1024px) {
+  .file-uploaded__item {
+    margin-right: 8px;
+  }
+  .file-uploaded__item .file-info {
+    margin-right: 60px;
+  }
 }
 
 .elements-on-top, .elements-on-top--1 {
