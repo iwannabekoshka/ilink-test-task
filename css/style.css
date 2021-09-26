@@ -522,6 +522,16 @@ h1, h2, h3, h4, p {
 .file-field__action input[type=file] {
   display: none;
 }
+@media (min-width: 1024px) {
+  .file-field__action {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .file-field__action p {
+    margin-bottom: 0;
+    margin-right: 1em;
+  }
+}
 
 .file-uploaded__item {
   display: flex;
@@ -556,6 +566,7 @@ h1, h2, h3, h4, p {
 }
 .file-uploaded__item .file-remove {
   width: 10px;
+  cursor: pointer;
 }
 
 .elements-on-top, .elements-on-top--1 {
@@ -876,7 +887,7 @@ h1, h2, h3, h4, p {
 @media (min-width: 1024px) {
   .section-2 {
     padding: 48px 0 56px;
-    background-image: url("../assets/img/rectangles-big-1.png"), url("../assets/img/rectangles-big-2.png");
+    background-image: url("../../../assets/img/rectangles-big-1.png"), url("../../../assets/img/rectangles-big-2.png");
     background-repeat: no-repeat no-repeat;
     background-position: left center, right center;
   }

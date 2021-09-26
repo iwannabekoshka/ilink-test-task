@@ -35,6 +35,18 @@
   & input[type="file"] {
     display: none;
   }
+
+  @media (min-width: $breakpoint-1) {
+    & {
+      flex-direction: row;
+      justify-content: center;
+    }
+    & p {
+      margin-bottom: 0;
+      margin-right: 1em;
+    }
+
+  }
 }
 
 .file-uploaded__item {
@@ -78,5 +90,7 @@
 
   .file-remove {
     width: 10px;
+
+    cursor: pointer;
   }
 }
