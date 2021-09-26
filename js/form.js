@@ -17,12 +17,12 @@ function onChangeInput() {
 function validateInput(id) {
 	switch (id) {
 		case 'js-form-gender':
-			validateGender(id);
+			validateGender();
 	}
 }
 
 function validateGender(id) {
-	const input = document.querySelector(`#${id}`);
+	const input = document.querySelector(`#js-form-gender`);
 	const value = input.value.toLowerCase();
 
 	if (selectItemsValues.includes(value) || value === '') {
@@ -37,7 +37,9 @@ selectItems.forEach(item => {
 	item.addEventListener('click', function() {
 		select.value = this.getAttribute('value');
 
-		select.blur()
+		select.blur();
+
+		validateGender();
 	});
 });
 
