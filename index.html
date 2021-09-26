@@ -75,35 +75,41 @@
 
 		<form class="form" action="/">
 			<div class="form-inputs">
-				<div>
+				<div class="form-inputs__row-1">
 					<label class="input-box">
 						<h4>Your name</h4>
-						<input type="text" placeholder="Tell us your name">
+						<input type="text" placeholder="Tell us your name" id="js-form-name">
 					</label>
 
 					<label class="input-box">
-					<h4>Your gender</h4>
-					<select>
-						<option value="" disabled selected>Choose your gender</option>
-						<option value="male">Male</option>
-						<option value="female">Female</option>
-					</select>
-				</label>
+						<h4>Your gender</h4>
+						<div class="input-select-wrapper">
+							<input class="input-select" id="js-form-gender" type="text" placeholder="Choose your gender" autocomplete="off">
+
+							<ul class="input-select-list" id="js-form-gender-list" style="display: none">
+								<li value="Male">Male</li>
+								<li value="Female">Female</li>
+							</ul>
+
+							<img class="input-select__arrow" src="assets/img/icons/arrow-select.svg" alt="Arrow for select">
+						</div>
+					</label>
 				</div>
-				<div>
+
+				<div class="form-inputs__row-2">
 					<label class="input-box">
 						<h4>Your country</h4>
-						<input type="text" placeholder="Where are you from?">
+						<input id="js-form-country" type="text" placeholder="Where are you from?">
 					</label>
 
 					<label class="input-box">
 						<h4>Your City</h4>
-						<input type="text" placeholder="Your native city">
+						<input id="js-form-city" type="text" placeholder="Your native city">
 					</label>
 
 					<label class="input-box">
 						<h4>Your date of birth</h4>
-						<input type="text" placeholder="dd.mm.yyy" onfocus="(this.type='date')" onblur="(this.type='text')">
+						<input id="js-form-birthdate" type="text" placeholder="dd.mm.yyy">
 					</label>
 				</div>
 			</div>
@@ -116,9 +122,7 @@
 					</div>
 				</div>
 
-				<div class="file-uploaded__items">
-
-				</div>
+				<div class="file-uploaded__items"></div>
 
 			</div>
 
@@ -166,7 +170,9 @@
 <!--JS-->
 <!--JS SLIDER-->
 <script src="js/slider.js"></script>
-<!--JS DRAG N DROP-->
+<!--JS DRAG N DROP (file upload)-->
 <script src="js/drag_n_drop.js"></script>
+<!--JS FORM (validation and logic)-->
+<script src="js/form.js"></script>
 </body>
 </html>

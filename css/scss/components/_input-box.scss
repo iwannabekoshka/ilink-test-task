@@ -1,4 +1,6 @@
 .input-box {
+  position: relative;
+
   display: block;
 
   min-width: 270px;
@@ -24,10 +26,28 @@
 
   border: 1px solid #D9BBFF;
   border-radius: 12px;
+
+  box-shadow: none;
 }
 .input-box input::-webkit-input-placeholder,
 .input-box select option:disabled {
   color: $color-silver-chalice;
+}
+
+.input-box.danger::after {
+  position: absolute;
+  content: "Error text";
+  top: 100%;
+  left: 0;
+  transform: translate(8px, 4px);
+
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 19px;
+  color: $color-french-rose;
+}
+.input-box.danger input {
+  border-color: $color-french-rose;
 }
 
 @media (min-width: $breakpoint-1) {
@@ -36,4 +56,54 @@
     margin-bottom: 40px;
   }
 
+}
+
+//SELECT
+.input-select-wrapper {
+  position: absolute;
+  width: 100%;
+}
+.input-select-list {
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  top: 100%;
+  transform: translateY(4px); //отступ между селектом и списком
+
+  width: 100%;
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  font-size: 16px;
+  line-height: 24px;
+  color: $color-east-mine-shaft;
+
+  border: 1px solid $color-mauve-2;
+  border-radius: 12px;
+  background-color: $color-white;
+
+  overflow: hidden;
+
+  & li {
+    padding: 16px;
+
+    cursor: pointer;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $color-mauve-2;
+    }
+  }
+}
+
+.input-select__arrow {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+
+  width: 12px;
+
+  cursor: pointer;
 }

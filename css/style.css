@@ -592,6 +592,7 @@ h1, h2, h3, h4, p {
 }
 
 .input-box {
+  position: relative;
   display: block;
   min-width: 270px;
   margin-bottom: 40px;
@@ -614,11 +615,28 @@ h1, h2, h3, h4, p {
   color: #303030;
   border: 1px solid #D9BBFF;
   border-radius: 12px;
+  box-shadow: none;
 }
 
 .input-box input::-webkit-input-placeholder,
 .input-box select option:disabled {
   color: #9F9F9F;
+}
+
+.input-box.danger::after {
+  position: absolute;
+  content: "Error text";
+  top: 100%;
+  left: 0;
+  transform: translate(8px, 4px);
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 19px;
+  color: #ED4376;
+}
+
+.input-box.danger input {
+  border-color: #ED4376;
 }
 
 @media (min-width: 1024px) {
@@ -627,6 +645,46 @@ h1, h2, h3, h4, p {
     margin-bottom: 40px;
   }
 }
+.input-select-wrapper {
+  position: absolute;
+  width: 100%;
+}
+
+.input-select-list {
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  top: 100%;
+  transform: translateY(4px);
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+  color: #303030;
+  border: 1px solid #D4B1FF;
+  border-radius: 12px;
+  background-color: #FFF;
+  overflow: hidden;
+}
+.input-select-list li {
+  padding: 16px;
+  cursor: pointer;
+}
+.input-select-list li:not(:last-child) {
+  border-bottom: 1px solid #D4B1FF;
+}
+
+.input-select__arrow {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  width: 12px;
+  cursor: pointer;
+}
+
 .slider {
   position: relative;
   height: 535px;
