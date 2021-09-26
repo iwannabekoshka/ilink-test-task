@@ -168,6 +168,15 @@
 
   align-items: center;
 }
+.form-success.active {
+  display: flex;
+}
+.form-inputs__row-2 {
+  display: none;
+}
+.form-inputs__row-2.active {
+  display: block;
+}
 
 @media (min-width: $breakpoint-1) {
   .section-2 {
@@ -189,7 +198,10 @@
     margin-bottom: 40px;
   }
 
-  .form-inputs div {
+  .form-inputs__row-1 {
+    display: flex;
+  }
+  .form-inputs__row-2.active {
     display: flex;
   }
   .form-buttons {

@@ -2,16 +2,55 @@ const inputs = document.querySelectorAll('.input-box input');
 const select = document.querySelector('.input-select');
 const selectList = document.querySelector('.input-select-list');
 const selectItems = document.querySelectorAll('.input-select-list li');
+const formSuccess = document.querySelector('.form-success');
 const selectItemsValues = getSelectValues();
+const form = document.querySelector('.form');
+const row2 = document.querySelector('.form-inputs__row-2');
+
+form.addEventListener('submit', function(event) {
+	event.preventDefault();
+
+	if (ifInputsCorrect()) {
+		console.log(formSuccess)
+		formSuccess.classList.add('active');
+	}
+});
 
 inputs.forEach(input => {
 	input.addEventListener('change', onChangeInput);
 });
 
+function ifInputsCorrect() {
+	let correct = true;
+
+	inputs.forEach(input => {
+		correct = correct && input.value;
+	});
+
+	return correct && validateGender() && validateBirthdate() && ifFileUploaded();
+}
+
 function onChangeInput() {
 	const id = this.getAttribute('id');
 
 	validateInput(id);
+
+	displaySecondRow();
+}
+
+function displaySecondRow() {
+	if (ifNameGenderValue()) {
+		row2.classList.add('active');
+	} else {
+		row2.classList.remove('active');
+	}
+}
+
+function ifNameGenderValue() {
+	const name = document.querySelector(`#js-form-name`).value;
+	const gender = document.querySelector(`#js-form-gender`).value;
+
+	return name && gender;
 }
 
 function validateInput(id) {
@@ -28,12 +67,16 @@ function validateInput(id) {
 function validateGender() {
 	const input = document.querySelector(`#js-form-gender`);
 	const value = input.value.toLowerCase();
+	let correct = true;
 
-	if (selectItemsValues.includes(value) || value === '') {
+	if (selectItemsValues.includes(value)) {
 		input.parentNode.parentNode.classList.remove('danger');
 	} else {
 		input.parentNode.parentNode.classList.add('danger');
+		correct = false;
 	}
+
+	return correct;
 }
 function validateBirthdate() {
 	const input = document.querySelector(`#js-form-birthdate`);
@@ -57,6 +100,12 @@ function validateBirthdate() {
 	} else {
 		input.parentNode.classList.add('danger');
 	}
+
+	return correct;
+}
+
+function ifFileUploaded() {
+	return document.querySelectorAll('.file-uploaded__item').length
 }
 
 //SELECT
@@ -67,6 +116,7 @@ selectItems.forEach(item => {
 		select.blur();
 
 		validateGender();
+		displaySecondRow();
 	});
 });
 
@@ -81,6 +131,8 @@ select.addEventListener('blur', function() {
 	setTimeout(() => {
 		select.blur()
 	},100); // странно, но событие расфокуса есть, а самого расфокуса нет. Для этого форсируем расфокус
+
+	ifNameGenderValue();
 });
 
 function getSelectValues() {

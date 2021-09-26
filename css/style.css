@@ -646,7 +646,7 @@ h1, h2, h3, h4, p {
   }
 }
 .input-select-wrapper {
-  position: absolute;
+  position: relative;
   width: 100%;
 }
 
@@ -942,6 +942,18 @@ h1, h2, h3, h4, p {
   align-items: center;
 }
 
+.form-success.active {
+  display: flex;
+}
+
+.form-inputs__row-2 {
+  display: none;
+}
+
+.form-inputs__row-2.active {
+  display: block;
+}
+
 @media (min-width: 1024px) {
   .section-2 {
     padding: 48px 0 56px;
@@ -961,7 +973,11 @@ h1, h2, h3, h4, p {
     margin-bottom: 40px;
   }
 
-  .form-inputs div {
+  .form-inputs__row-1 {
+    display: flex;
+  }
+
+  .form-inputs__row-2.active {
     display: flex;
   }
 
