@@ -12,6 +12,8 @@ const sliderDots = document.querySelectorAll('.slider-dots img');
 const dotInactiveSrc = 'assets/img/icons/dot-inactive.svg';
 const dotActiveSrc = 'assets/img/icons/dot-active.svg';
 
+let carousel = setInterval(slideRight, 5000);
+
 setImagesWidth();
 window.addEventListener('resize', function() {
 	setImagesWidth();
@@ -19,23 +21,30 @@ window.addEventListener('resize', function() {
 });
 
 sliderBtnLeft.addEventListener('click', () => {
-	const photoWidth = slider.offsetWidth;
-
-	setImagesWidth();
-
-	offset -= photoWidth;
-	position--;
-
-	if (offset < 0) {
-		offset = photoWidth*lastImageIndex;
-		position = lastImageIndex;
-	}
-
-	setActiveDot();
-
-	sliderLine.style.left = -offset + 'px';
+	clearInterval(carousel);
+	carousel = setInterval(slideRight, 5000);
+	slideLeft();
 });
 sliderBtnRight.addEventListener('click', () => {
+	clearInterval(carousel);
+	carousel = setInterval(slideRight, 5000);
+	slideRight();
+});
+
+sliderDots.forEach((dot, index) => {
+	dot.addEventListener('click', () => {
+		position = index;
+
+		const photoWidth = slider.offsetWidth;
+		offset = photoWidth*position;
+
+		setActiveDot();
+
+		sliderLine.style.left = -offset + 'px';
+	})
+});
+
+function slideRight() {
 	const photoWidth = slider.offsetWidth;
 
 	setImagesWidth();
@@ -51,20 +60,24 @@ sliderBtnRight.addEventListener('click', () => {
 	setActiveDot();
 
 	sliderLine.style.left = -offset + 'px';
-});
+}
+function slideLeft() {
+	const photoWidth = slider.offsetWidth;
 
-sliderDots.forEach((dot, index) => {
-	dot.addEventListener('click', () => {
-		position = index;
+	setImagesWidth();
 
-		const photoWidth = slider.offsetWidth;
-		offset = photoWidth*position;
+	offset -= photoWidth;
+	position--;
 
-		setActiveDot();
+	if (offset < 0) {
+		offset = photoWidth*lastImageIndex;
+		position = lastImageIndex;
+	}
 
-		sliderLine.style.left = -offset + 'px';
-	})
-})
+	setActiveDot();
+
+	sliderLine.style.left = -offset + 'px';
+}
 
 function setImagesWidth() { // Картинки почему-то разной ширины, это фикс
 	const photoWidth = slider.offsetWidth;
