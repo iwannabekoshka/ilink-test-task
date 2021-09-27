@@ -13,7 +13,10 @@ const dotInactiveSrc = 'assets/img/icons/dot-inactive.svg';
 const dotActiveSrc = 'assets/img/icons/dot-active.svg';
 
 setImagesWidth();
-window.addEventListener('resize', setImagesWidth);
+window.addEventListener('resize', function() {
+	setImagesWidth();
+	setSliderLineOffset();
+});
 
 sliderBtnLeft.addEventListener('click', () => {
 	const photoWidth = slider.offsetWidth;
@@ -79,4 +82,11 @@ function setActiveDot() {
 			dot.src = dotInactiveSrc;
 		}
 	});
+}
+
+function setSliderLineOffset() {
+	const photoWidth = slider.offsetWidth;
+	offset = photoWidth*position;
+
+	sliderLine.style.left = -offset + 'px';
 }
