@@ -55,6 +55,8 @@ function previewFile(file) {
 
 		fileInfo.src = img.src;
 		uploadedFilesField.insertAdjacentHTML('beforeend' ,createUploadedFilePreview(fileInfo));
+
+		validateInput(); // from js/form.js
 	}
 }
 

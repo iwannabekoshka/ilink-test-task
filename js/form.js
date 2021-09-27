@@ -23,6 +23,7 @@ function ifInputsCorrect() {
 	let correct = true;
 
 	inputs.forEach(input => {
+		if (input.id === 'js-file-input') return;
 		correct = correct && input.value;
 	});
 
@@ -34,7 +35,7 @@ function onChangeInput() {
 
 	validateInput(id);
 
-	displaySecondRow();
+	displaySecondRow(id);
 }
 
 function displaySecondRow() {
@@ -76,6 +77,8 @@ function validateGender() {
 	const value = input.value.toLowerCase();
 	let correct = true;
 
+	if (value === '') return;
+
 	if (selectItemsValues.includes(value)) {
 		input.parentNode.parentNode.classList.remove('danger');
 	} else {
@@ -89,6 +92,8 @@ function validateBirthdate() {
 	const input = document.querySelector(`#js-form-birthdate`);
 	const valueSplitted = input.value.split('.');
 	let correct = true;
+
+	if (input.value === '') return;
 
 	// проверяем, что у нас формат с точками (dd.mm.yyy)
 	if (valueSplitted.length !== 3) correct = false;
@@ -112,7 +117,8 @@ function validateBirthdate() {
 }
 
 function ifFileUploaded() {
-	return document.querySelector('#js-file-input').files.length;
+	console.log(document.querySelectorAll('.file-uploaded__item').length)
+	return document.querySelectorAll('.file-uploaded__item').length;
 }
 
 //SELECT
