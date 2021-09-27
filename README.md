@@ -1,61 +1,34 @@
-# Frontend Mentor - Order summary card solution
+# Тестовое задание на позицию Frontend-стажёр в Академию iLink
 
-This is a solution to the [Order summary card challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/order-summary-component-QlPmajDUj). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+## Оглавление
 
-## Table of contents
+- [Обзор](#overview)
+  - [Задача](#the-challenge)
+  - [Требования](#screenshot)
+  - [Ссылки](#links)
+- [Как это делалось](#my-process)
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-- [Author](#author)
+## Обзор
 
-## Overview
+### Задача
 
-### The challenge
+Разработать страницу по макету из [Figma](https://www.figma.com/file/Mfjlw4bCRN4Hj01ngYN3KN/Test-task?node-id=0%3A1).
 
-Users should be able to:
+### Требования
 
-- See hover states for interactive elements
+- Страница должна быть создана с использованием нативных языков: CSS, HTML, JavaScript;
+- Можно использовать препроцессоры и шаблонизаторы для CSS и HTML.
+- JS нужно использовать только нативный!
+- ЗАПРЕЩЕНО использовать плагины и библиотеки, даже для упрощенной работы с домом, т.к. цель задания - узнать, понимает ли кандидат возможности Vanilla JS.
+- Также не запрещается написать страницу без использования JS (при этом всё должно работать).
 
-### Screenshot
 
-![](project-screenshot.png)
+### Ссылки
 
-### Links
+- GitHub: [click](https://github.com/iwannabekoshka/ilink-test-task)
+- GitHub Pages: [click](https://iwannabekoshka.github.io/ilink-test-task/)
 
-- Solution URL: [click](https://github.com/iwannabekoshka/01-order-summary-component)
-- Live Site URL: [click](https://iwannabekoshka.github.io/01-order-summary-component/)
+## Как это делалось
 
-## My process
-
-### Built with
-
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-
-### What I learned
-
-It was my first try with Git branches. Awesome tool, despite I used not so many features.
-I had an issue with deployment to Github Pages: my styles wasn't applied. So I created a branch called **_deployment_test_**
-and tested some stuff to fix this problem. But unfortunately I should merge this branch to MASTER every time when 
-I want to see changes. But it was good experience anyway :)
-
-Also, I have learned Markdown language. It is nice and simple.
-
-### Continued development
-
-I want to use Git branches more and maybe go for a Sass.
-
-## Author
-
-- Frontend Mentor - [@iwannabekoshka](https://www.frontendmentor.io/profile/iwannabekoshka)
-
-## Used command line commands
-- `sass --watch css/scss/main.scss:css/style.css` - компиляция Sass в CSS
-- `live-server` - сервер с автоматической перезагрузкой страницы при изменениях в файлах
+- Использовались HTML, CSS, JS;
+- Использовался препроцессор SCSS для CSS, разбитие проекта по структуре 7-1
