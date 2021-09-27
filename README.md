@@ -28,7 +28,7 @@
 - GitHub: [click](https://github.com/iwannabekoshka/ilink-test-task)
 - GitHub Pages: [click](https://iwannabekoshka.github.io/ilink-test-task/)
 
-## Как это делалось
+## <a name="my-process"></a>Как это делалось
 
 - Использовались HTML, CSS, JS;
 - Использовался препроцессор SCSS для CSS, разбитие проекта по структуре 7-1
