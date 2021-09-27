@@ -737,6 +737,7 @@ h1, h2, h3, h4, p {
 
 .slider-line {
   position: absolute;
+  left: 0;
   height: 535px;
   display: flex;
   transition: 0.3s;
