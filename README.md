@@ -4,17 +4,17 @@
 
 - [Обзор](#overview)
   - [Задача](#the-challenge)
-  - [Требования](#screenshot)
+  - [Требования](#requirements)
   - [Ссылки](#links)
 - [Как это делалось](#my-process)
 
-## Обзор
+## <a name="overview"></a>Обзор
 
-### Задача
+### <a name="the-challenge"></a>Задача
 
 Разработать страницу по макету из [Figma](https://www.figma.com/file/Mfjlw4bCRN4Hj01ngYN3KN/Test-task?node-id=0%3A1).
 
-### Требования
+### <a name="requirements"></a>Требования
 
 - Страница должна быть создана с использованием нативных языков: CSS, HTML, JavaScript;
 - Можно использовать препроцессоры и шаблонизаторы для CSS и HTML.
@@ -23,7 +23,7 @@
 - Также не запрещается написать страницу без использования JS (при этом всё должно работать).
 
 
-### Ссылки
+### <a name="links"></a>Ссылки
 
 - GitHub: [click](https://github.com/iwannabekoshka/ilink-test-task)
 - GitHub Pages: [click](https://iwannabekoshka.github.io/ilink-test-task/)
