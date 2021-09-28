@@ -14,6 +14,7 @@ document.addEventListener('click',function(event){
 		// Как я понял, удалить файл из мультифайлового инпута нельзя, поэтому пока что просто удалю нод
 
 		uploadedFileNode.remove();
+		validateInput(); // from js/form.js
 	}
 });
 
