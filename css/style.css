@@ -647,6 +647,8 @@ h1, h2, h3, h4, p {
 }
 
 .input-box input {
+  box-shadow: none !important;
+  outline: none;
   width: 100%;
   padding: 15px 12px;
   font-size: 16px;
@@ -655,8 +657,11 @@ h1, h2, h3, h4, p {
   background: #FFF;
   border: 1px solid #D9BBFF;
   border-radius: 12px;
-  box-shadow: none;
-  outline: none;
+}
+.input-box input[type=text] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 .input-box input:focus {
   border-color: #8E43ED;
