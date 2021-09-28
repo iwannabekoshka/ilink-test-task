@@ -6,12 +6,17 @@ const formSuccess = document.querySelector('.form-success');
 const selectItemsValues = getSelectValues();
 const form = document.querySelector('.form');
 const row2 = document.querySelector('.form-inputs__row-2');
+let formSubmitted = false;
 
 form.addEventListener('submit', function(event) {
 	event.preventDefault();
 
+	if (formSubmitted) return;
+
 	if ( ifInputsCorrect() ) {
 		formSuccess.classList.add('active');
+		document.querySelector("#js-btn-submit").disabled = true;
+		formSubmitted = true;
 	}
 });
 
