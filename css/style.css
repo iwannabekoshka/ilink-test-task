@@ -1063,5 +1063,10 @@ h1, h2, h3, h4, p {
   padding: 32px 0;
   background: #FFF;
 }
+@media (min-width: 1024px) {
+  .section-3 {
+    padding: 56px 64px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

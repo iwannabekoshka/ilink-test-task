@@ -238,4 +238,10 @@
 .section-3 {
   padding: 32px 0;
   background: $color-white;
+
+  @media (min-width: $breakpoint-1) {
+    & {
+      padding: 56px 64px;
+    }
+  }
 }
