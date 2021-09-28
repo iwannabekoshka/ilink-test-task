@@ -117,7 +117,6 @@ function validateBirthdate() {
 }
 
 function ifFileUploaded() {
-	console.log(document.querySelectorAll('.file-uploaded__item').length)
 	return document.querySelectorAll('.file-uploaded__item').length;
 }
 
