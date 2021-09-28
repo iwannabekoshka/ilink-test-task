@@ -132,7 +132,9 @@ selectItems.forEach(item => {
 		displaySecondRow();
 	});
 });
-
+select.addEventListener('input', function(event) {
+	event.target.value = '';
+});
 select.addEventListener('focus', function() {
 	selectList.style.display = "block";
 });
