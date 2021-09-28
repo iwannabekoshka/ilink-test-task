@@ -613,17 +613,20 @@ h1, h2, h3, h4, p {
 .elements-on-top--1 {
   width: 30%;
   height: 40%;
-  right: 0;
+  right: -1%;
   bottom: -10%;
+}
+@media (min-width: 1024px) {
+  .elements-on-top--1 {
+    left: -11%;
+    bottom: -8%;
+    width: 35%;
+    height: 45%;
+    transform: rotateY(180deg);
+  }
 }
 
 .elements-on-top--2 {
-  /*@extend .elements-on-top;
-
-  height: 100%;
-
-  right: 0;
-  top: 50%;*/
   width: auto;
   transform: rotate(-150deg);
 }
